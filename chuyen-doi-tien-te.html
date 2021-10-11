@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phạm Đức Thắng</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="st">
+        <td>
+            <select name="VN" id="st1">
+                <option value="a">VietNam</option>
+                <option value="b">American</option>
+            </select>
+        </td>
+        <td>
+            <select name="USA" id="st2">
+                <option value="a">VNĐ</option>
+                <option value="b">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="chuyendoi()">Convert</button>
+        </td>
+    </tr>
+</table>
+    <script>
+        function chuyendoi() {
+            let sotien = document.getElementById("st").value;
+            let sotien1 = document.getElementById("st1").value;
+            let sotien2 = document.getElementById("st2").value;
+            if (sotien1 == sotien2) {
+                alert(sotien);
+            }
+            if (sotien1 == "a" && sotien2 == "b") {
+                alert(sotien/23000);
+            }
+            if (sotien1 == "b" && sotien2 == "a") {
+                alert(sotien*23000);
+            }
+            if (sotien1 == "b" && sotien2 == "b") {
+                alert(sotien);
+            }
+        }
+    </script>
+</body>
+</html>
